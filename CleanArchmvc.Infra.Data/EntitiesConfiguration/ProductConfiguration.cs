@@ -20,7 +20,7 @@ namespace CleanArchmvc.Infra.Data.EntitiesConfiguration
 
             builder.HasOne(p => p.Category)
                 .WithMany(c => c.Products)
-                .HasForeignKey(p => p.Category);
+                .HasForeignKey(p => p.CategoryId);
         }
     }
 }
