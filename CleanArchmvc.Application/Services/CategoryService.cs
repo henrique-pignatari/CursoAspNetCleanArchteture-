@@ -1,15 +1,15 @@
 ﻿using AutoMapper;
-using CleanArchmvc.Application.DTOs;
-using CleanArchmvc.Application.Interfaces;
-using CleanArchmvc.Domain.Entities;
-using CleanArchmvc.Domain.Interfaces;
+using CleanArchMvc.Application.DTOs;
+using CleanArchMvc.Application.Interfaces;
+using CleanArchMvc.Domain.Entities;
+using CleanArchMvc.Domain.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CleanArchmvc.Application.Services
+namespace CleanArchMvc.Application.Services
 {
     public class CategoryService : ICategoryService
     {

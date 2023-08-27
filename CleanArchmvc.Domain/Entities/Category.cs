@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using CleanArchmvc.Domain.Validation;
+using CleanArchMvc.Domain.Validation;
 
-namespace CleanArchmvc.Domain.Entities
+namespace CleanArchMvc.Domain.Entities
 {
     public sealed class Category: Entity
     {

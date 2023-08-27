@@ -1,6 +1,6 @@
-﻿using CleanArchmvc.Domain.Entities;
-using CleanArchmvc.Domain.Interfaces;
-using CleanArchmvc.Infra.Data.Context;
+﻿using CleanArchMvc.Domain.Entities;
+using CleanArchMvc.Domain.Interfaces;
+using CleanArchMvc.Infra.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CleanArchmvc.Infra.Data.Repositories
+namespace CleanArchMvc.Infra.Data.Repositories
 {
     public class CategoryRepository : ICategoryRepository
     {

@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace CleanArchmvc.Infra.Data.Migrations
+namespace CleanArchMvc.Infra.Data.Migrations
 {
     /// <inheritdoc />
     public partial class SeedProducts : Migration

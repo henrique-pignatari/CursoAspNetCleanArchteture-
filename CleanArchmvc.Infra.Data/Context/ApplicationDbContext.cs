@@ -1,4 +1,4 @@
-﻿using CleanArchmvc.Domain.Entities;
+﻿using CleanArchMvc.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CleanArchmvc.Infra.Data.Context
+namespace CleanArchMvc.Infra.Data.Context
 {
     public class ApplicationDbContext: DbContext
     {

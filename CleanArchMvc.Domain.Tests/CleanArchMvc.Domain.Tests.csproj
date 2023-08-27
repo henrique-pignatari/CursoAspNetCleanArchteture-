@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CleanArchmvc.Domain\CleanArchmvc.Domain.csproj" />
+    <ProjectReference Include="..\CleanArchmvc.Domain\CleanArchMvc.Domain.csproj" />
   </ItemGroup>
 
 </Project>

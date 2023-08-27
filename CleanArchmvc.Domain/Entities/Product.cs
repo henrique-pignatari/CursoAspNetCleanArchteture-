@@ -1,11 +1,11 @@
-﻿using CleanArchmvc.Domain.Validation;
+﻿using CleanArchMvc.Domain.Validation;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CleanArchmvc.Domain.Entities
+namespace CleanArchMvc.Domain.Entities
 {
     public sealed class Product: Entity
     {

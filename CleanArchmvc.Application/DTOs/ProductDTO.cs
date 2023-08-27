@@ -1,4 +1,4 @@
-﻿using CleanArchmvc.Domain.Entities;
+﻿using CleanArchMvc.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CleanArchmvc.Application.DTOs
+namespace CleanArchMvc.Application.DTOs
 {
     public class ProductDTO
     {

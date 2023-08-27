@@ -1,4 +1,4 @@
-using CleanArchmvc.Domain.Entities;
+using CleanArchMvc.Domain.Entities;
 using FluentAssertions;
 
 namespace CleanArchMvc.Domain.Tests
@@ -10,7 +10,7 @@ namespace CleanArchMvc.Domain.Tests
         {
             Action action = () => new Category(1, "Category Name");
             action.Should()
-                .NotThrow<CleanArchmvc.Domain.Validation.DomainExceptionValidation>();
+                .NotThrow<CleanArchMvc.Domain.Validation.DomainExceptionValidation>();
         }
 
 
@@ -19,7 +19,7 @@ namespace CleanArchMvc.Domain.Tests
         {
             Action action = () => new Category(-1, "Category Name");
             action.Should()
-                .Throw<CleanArchmvc.Domain.Validation.DomainExceptionValidation>()
+                .Throw<CleanArchMvc.Domain.Validation.DomainExceptionValidation>()
                 .WithMessage("Invalid Id value.");
         }
 
@@ -28,7 +28,7 @@ namespace CleanArchMvc.Domain.Tests
         {
             Action action = () => new Category(1, "Ca");
             action.Should()
-                .Throw<CleanArchmvc.Domain.Validation.DomainExceptionValidation>()
+                .Throw<CleanArchMvc.Domain.Validation.DomainExceptionValidation>()
                 .WithMessage("Invalid name, too short, minimum 3 characters");
         }
 
@@ -37,7 +37,7 @@ namespace CleanArchMvc.Domain.Tests
         {
             Action action = () => new Category(1, "");
             action.Should()
-                .Throw<CleanArchmvc.Domain.Validation.DomainExceptionValidation>()
+                .Throw<CleanArchMvc.Domain.Validation.DomainExceptionValidation>()
                 .WithMessage("Invalid name. Name is required");
         }
 
@@ -46,7 +46,7 @@ namespace CleanArchMvc.Domain.Tests
         {
             Action action = () => new Category(1, null);
             action.Should()
-                .Throw<CleanArchmvc.Domain.Validation.DomainExceptionValidation>()
+                .Throw<CleanArchMvc.Domain.Validation.DomainExceptionValidation>()
                 .WithMessage("Invalid name. Name is required");
         }
     }
