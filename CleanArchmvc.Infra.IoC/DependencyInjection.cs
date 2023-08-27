@@ -1,11 +1,14 @@
-﻿using CleanArchmvc.Domain.Interfaces;
-using CleanArchmvc.Infra.Data.Context;
-using CleanArchmvc.Infra.Data.Repositories;
+﻿using CleanArchMvc.Application.Interfaces;
+using CleanArchMvc.Application.Mappings;
+using CleanArchMvc.Application.Services;
+using CleanArchMvc.Domain.Interfaces;
+using CleanArchMvc.Infra.Data.Context;
+using CleanArchMvc.Infra.Data.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace CleanArchmvc.Infra.IoC
+namespace CleanArchMvc.Infra.IoC
 {
     public static class DependencyInjection
     {
@@ -21,6 +24,9 @@ namespace CleanArchmvc.Infra.IoC
 
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<ICategoryService, CategoryService>();
+            services.AddScoped<IProductService, ProductService>();
+            services.AddAutoMapper(typeof(DomainToDTOMappingProfile));
 
             return services;
         }
