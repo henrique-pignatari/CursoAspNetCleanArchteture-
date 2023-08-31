@@ -14,7 +14,7 @@ namespace CleanArchMvc.Application.Products.Queries
 
         public GetProductByIdQuery(int id)
         {
-            Id = Id;
+            Id = id;
         }
     }
 }
