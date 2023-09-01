@@ -9,7 +9,7 @@ namespace CleanArchMvc.WebUI.Controllers
         private readonly ICategoryService _categoryService;
         public CategoriesController(ICategoryService categoryService)
         {
-            _categoryService = categoryService;        
+            _categoryService = categoryService;
         }
 
         [HttpGet]
@@ -28,7 +28,7 @@ namespace CleanArchMvc.WebUI.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(CategoryDTO categoryDTO)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 await _categoryService.AddAsync(categoryDTO);
                 return RedirectToAction(nameof(Index));
@@ -40,11 +40,11 @@ namespace CleanArchMvc.WebUI.Controllers
         [HttpGet]
         public async Task<IActionResult> Edit(int? id)
         {
-            if(id == null) return NotFound();
+            if (id == null) return NotFound();
 
             var categoryVM = await _categoryService.GetByIdAsync(id);
 
-            if(categoryVM == null) return NotFound();
+            if (categoryVM == null) return NotFound();
 
             return View(categoryVM);
         }
@@ -74,13 +74,13 @@ namespace CleanArchMvc.WebUI.Controllers
             if (id == null) return NotFound();
 
             var categoryDTO = await _categoryService.GetByIdAsync(id);
-            
-            if(categoryDTO == null) return NotFound();
+
+            if (categoryDTO == null) return NotFound();
 
             return View(categoryDTO);
         }
 
-        [HttpPost,ActionName("Delete")]
+        [HttpPost, ActionName("Delete")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             await _categoryService.RemoveAsync(id);
@@ -92,9 +92,9 @@ namespace CleanArchMvc.WebUI.Controllers
         {
             if (id == null) return NotFound();
 
-            var categoryDTO  = await _categoryService.GetByIdAsync(id);
+            var categoryDTO = await _categoryService.GetByIdAsync(id);
 
-            if(categoryDTO == null) return NotFound();
+            if (categoryDTO == null) return NotFound();
 
             return View(categoryDTO);
         }

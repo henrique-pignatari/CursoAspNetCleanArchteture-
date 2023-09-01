@@ -1,10 +1,5 @@
 ﻿using CleanArchMvc.Domain.Entities;
 using FluentAssertions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CleanArchMvc.Domain.Tests
 {
@@ -32,7 +27,7 @@ namespace CleanArchMvc.Domain.Tests
         {
             Action action = () => new Product(1, "Pr", "Product Description", 9.99m, 99, "Product Image");
             action.Should()
-                .Throw<CleanArchMvc.Domain.Validation.DomainExceptionValidation> ()
+                .Throw<CleanArchMvc.Domain.Validation.DomainExceptionValidation>()
                 .WithMessage("Invalid name. To shortm minimun 3 characters");
         }
 
@@ -101,7 +96,7 @@ namespace CleanArchMvc.Domain.Tests
         {
             Action action = () => new Product(1, "Product Name", "Product Description", -9.99m, 99, "Product Image");
             action.Should()
-                .Throw<CleanArchMvc.Domain.Validation.DomainExceptionValidation> ()
+                .Throw<CleanArchMvc.Domain.Validation.DomainExceptionValidation>()
                 .WithMessage("Invalid price value");
         }
 
@@ -111,7 +106,7 @@ namespace CleanArchMvc.Domain.Tests
         {
             Action action = () => new Product(1, "Product Name", "Product Description", 9.99m, value, "Product Image");
             action.Should()
-                .Throw<CleanArchMvc.Domain.Validation.DomainExceptionValidation> ()
+                .Throw<CleanArchMvc.Domain.Validation.DomainExceptionValidation>()
                 .WithMessage("Invalid stock value");
         }
     }

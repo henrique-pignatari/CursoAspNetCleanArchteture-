@@ -3,14 +3,7 @@ using CleanArchMvc.Application.DTOs;
 using CleanArchMvc.Application.Interfaces;
 using CleanArchMvc.Application.Products.Commands;
 using CleanArchMvc.Application.Products.Queries;
-using CleanArchMvc.Domain.Entities;
-using CleanArchMvc.Domain.Interfaces;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CleanArchMvc.Application.Services
 {
@@ -29,7 +22,7 @@ namespace CleanArchMvc.Application.Services
         {
             var productsQuery = new GetProductsQuery();
 
-            if(productsQuery == null)
+            if (productsQuery == null)
             {
                 throw new Exception($"Entity could not be loaded");
             }
@@ -83,7 +76,7 @@ namespace CleanArchMvc.Application.Services
         {
             var productRemoveCommand = new ProductRemoveCommand(id.Value);
 
-            if(productRemoveCommand == null)
+            if (productRemoveCommand == null)
             {
                 throw new Exception($"Entity could not be loaded.");
             }

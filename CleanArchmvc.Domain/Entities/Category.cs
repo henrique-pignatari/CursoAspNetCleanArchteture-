@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using CleanArchMvc.Domain.Validation;
+﻿using CleanArchMvc.Domain.Validation;
 
 namespace CleanArchMvc.Domain.Entities
 {
-    public sealed class Category: Entity
+    public sealed class Category : Entity
     {
         public string Name { get; private set; }
 
